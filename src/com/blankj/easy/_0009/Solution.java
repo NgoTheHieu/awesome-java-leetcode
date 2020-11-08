@@ -1,4 +1,4 @@
-package com.blankj.easy._009;
+package com.blankj.easy._0009;
 
 /**
  * <pre>
@@ -25,7 +25,10 @@ public class Solution {
         while (x > halfReverseX) {
             halfReverseX = halfReverseX * 10 + x % 10;
             x /= 10;
+            System.out.println("halfReverseX * 10: " + (halfReverseX*10));
+            System.out.println("x % 10: " + (x%10));
         }
+        System.out.println(halfReverseX);
         return halfReverseX == x || halfReverseX / 10 == x;
     }
 
@@ -37,6 +40,6 @@ public class Solution {
         System.out.println(solution.isPalindrome(0));
         System.out.println(solution.isPalindrome(11));
         System.out.println(solution.isPalindrome(111));
-        System.out.println(solution.isPalindrome(222222222));
+        System.out.println("Result: "+ solution.isPalindrome(222222222));
     }
 }

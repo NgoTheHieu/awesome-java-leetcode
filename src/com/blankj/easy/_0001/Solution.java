@@ -3,6 +3,12 @@ package com.blankj.easy._001;
 import java.util.Arrays;
 import java.util.HashMap;
 
+// Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+// You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+// You can return the answer in any order.
+
 /**
  * <pre>
  *     author: Blankj
@@ -27,8 +33,10 @@ public class Solution {
         int len = nums.length;
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < len; ++i) {
-            final Integer value = map.get(nums[i]);
+            Integer value = map.get(nums[i]);
+            System.out.println("This is value: " + value);
             if (value != null) {
+                System.out.println("This is :" + Arrays.toString((new int[] {value,i})));
                 return new int[] { value, i };
             }
             map.put(target - nums[i], i);
@@ -39,7 +47,10 @@ public class Solution {
     public static void main(String[] args) {
         Solution solution = new Solution();
         int[] nums = new int[]{2, 7, 11, 15};
+        int[] nums2 = new int[]{11,12,23,24};
         int target = 9;
+        int target2 = 35;
         System.out.println(Arrays.toString(solution.twoSum(nums, target)));
+        System.out.println(Arrays.toString(solution.twoSum(nums2, target2)));
     }
 }

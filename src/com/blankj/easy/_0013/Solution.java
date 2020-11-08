@@ -1,4 +1,4 @@
-package com.blankj.easy._013;
+package com.blankj.easy._0013;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,30 +12,39 @@ import java.util.Map;
  * </pre>
  */
 public class Solution {
-    public int romanToInt(String s) {
-        Map<Character, Integer> map = new HashMap<>();
-        map.put('I', 1);
-        map.put('V', 5);
-        map.put('X', 10);
-        map.put('L', 50);
-        map.put('C', 100);
-        map.put('D', 500);
-        map.put('M', 1000);
-        int len = s.length();
-        int sum = map.get(s.charAt(len - 1));
-        for (int i = len - 2; i >= 0; --i) {
-            if (map.get(s.charAt(i)) < map.get(s.charAt(i + 1))) {
-                sum -= map.get(s.charAt(i));
-            } else {
-                sum += map.get(s.charAt(i));
-            }
-        }
-        return sum;
-    }
 
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.romanToInt("DCXXI"));// 621
-        System.out.println(solution.romanToInt("CCCXLVIII"));// 348
+  public int romanToInt(String s) {
+    try {
+      Map<Character, Integer> map = new HashMap<>();
+      map.put('I', 1);
+      map.put('V', 5);
+      map.put('X', 10);
+      map.put('L', 50);
+      map.put('C', 100);
+      map.put('D', 500);
+      map.put('M', 1000);
+      int len = s.length();
+      int sum = map.get(s.charAt(len - 1));
+      for (int i = len - 2; i >= 0; --i) {
+        if (map.get(s.charAt(i)) < map.get(s.charAt(i + 1))) {
+          sum -= map.get(s.charAt(i));
+          System.out.println("s.charAt(i): " + s.charAt(i));
+          System.out.println("This is map.get(s.charAt(i)): " +map.get(s.charAt(i)));
+        } else {
+          sum += map.get(s.charAt(i));
+        }
+      }
+      return sum;
+    } catch (Exception e) {
+      System.out.println(e);
+      return 0;
     }
+  }
+
+  public static void main(String[] args) {
+    Solution solution = new Solution();
+    System.out.println(solution.romanToInt("DCXXI")); // 621
+    System.out.println(solution.romanToInt("CCCXLVIII")); // 348
+    System.out.println(solution.romanToInt("IIICCCXLL"));
+  }
 }

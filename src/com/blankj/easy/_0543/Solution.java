@@ -1,4 +1,4 @@
-package com.blankj.easy._543;
+package com.blankj.easy._0543;
 
 
 import com.blankj.structure.TreeNode;

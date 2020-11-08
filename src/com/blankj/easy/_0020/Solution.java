@@ -15,6 +15,7 @@ public class Solution {
         for (char c : s.toCharArray()) {
             if (c == '(' || c == '[' || c == '{') {
                 stack[top++] = c;
+                
             } else if (c == ')' && stack[--top] != '(') {
                 return false;
             } else if (c == ']' && stack[--top] != '[') {
