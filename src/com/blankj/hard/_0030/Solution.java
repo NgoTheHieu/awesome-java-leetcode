@@ -1,4 +1,4 @@
-package com.blankj.hard._030;
+package com.blankj.hard._0030;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package com.blankj.medium._056;
+package com.blankj.medium._0056;
 
 import com.blankj.structure.Interval;
 

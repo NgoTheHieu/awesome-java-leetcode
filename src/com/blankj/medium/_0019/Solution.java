@@ -1,4 +1,4 @@
-package com.blankj.medium._019;
+package com.blankj.medium._0019;
 
 import com.blankj.structure.ListNode;
 

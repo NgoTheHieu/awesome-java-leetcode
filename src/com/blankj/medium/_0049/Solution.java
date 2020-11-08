@@ -1,4 +1,4 @@
-package com.blankj.medium._049;
+package com.blankj.medium._0049;
 
 import java.util.ArrayList;
 import java.util.Arrays;
